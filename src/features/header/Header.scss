@@ -1,0 +1,14 @@
+.menu-item {
+    span {
+      font-weight: bold;
+      color: black;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+}
+
+.current-menu-item span {
+  color: white;
+  font-weight: bold;
+}
