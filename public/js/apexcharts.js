@@ -14714,15 +14714,13 @@
                 ((this.yaxisLabels = this.graphics.group({ class: 'apexcharts-yaxis' })),
                 t.forEach(function (t, n) {
                   var l = t.length === i.globals.dataPoints,
-                    h = e.graphics
-                      .group()
-                      .attr({
-                        class: 'apexcharts-series',
-                        'data:longestSeries': l,
-                        seriesName: f.escapeString(i.globals.seriesNames[n]),
-                        rel: n + 1,
-                        'data:realIndex': n
-                      });
+                    h = e.graphics.group().attr({
+                      class: 'apexcharts-series',
+                      'data:longestSeries': l,
+                      seriesName: f.escapeString(i.globals.seriesNames[n]),
+                      rel: n + 1,
+                      'data:realIndex': n
+                    });
                   (e.dataRadiusOfPercent[n] = []),
                     (e.dataRadius[n] = []),
                     (e.angleArr[n] = []),

@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../../assets/images/logo/logo.png';
 import darkLogo from '../../assets/images/logo/logo-dark.png';
 import './Header.scss';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { titleize } from '../../helpers/string';
 
 export const Header = () => {
+  const location = useLocation();
+  const navigationLinks = ['home', 'about', 'markets', 'trade', 'support', 'feeds'];
+
   const [activeLink, setActiveLink] = useState('home');
   const navigate = useNavigate();
 
-  const navigationLinks = ['home', 'about', 'markets', 'trade', 'support', 'feeds'];
+  useEffect(() => {
+    const currentLink = navigationLinks.find((link) => location.pathname.includes(link));
+    setActiveLink(currentLink);
+  }, []);
 
   const changePage = (link) => {
     setActiveLink(link);

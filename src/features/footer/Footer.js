@@ -15,13 +15,13 @@ export const Footer = () => {
                 <h6>Let`s talk! 🤙</h6>
                 <ul className="list">
                   <li>
-                    <p>+12 345 678 9101</p>
+                    <p>+91 9244 342423</p>
                   </li>
                   <li>
-                    <p>Info.Avitex@Gmail.Com</p>
+                    <p>support@vozswap.io</p>
                   </li>
                   <li>
-                    <p>Cecilia Chapman 711-2880 Nulla St. Mankato Mississippi 96522</p>
+                    <p>C-68,Pandav Nagar,New Delhi-110092</p>
                   </li>
                 </ul>
               </div>

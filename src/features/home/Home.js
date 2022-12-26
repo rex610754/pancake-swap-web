@@ -1,6 +1,23 @@
 import React from 'react';
 // import { Container } from 'react-bootstrap';
-
+import bannerImage from '../../assets/images/banner.png';
+import aboutImage from '../../assets/images/layout/about-h1.png';
+import icon1Image from '../../assets/images/icon/icon-01.png';
+import icon2Image from '../../assets/images/icon/icon-02.png';
+import icon3Image from '../../assets/images/icon/icon-03.png';
+import icon4Image from '../../assets/images/icon/icon-04.png';
+import icon5Image from '../../assets/images/icon/icon-05.png';
+import downloadImage from '../../assets/images/layout/download.png';
+import googlePlayIcon from '../../assets/images/icon/googleplay.png';
+import appStoreIcon from '../../assets/images/icon/appstore.png';
+import avtar1 from '../../assets/images/avt/avt-02.png';
+import avtar2 from '../../assets/images/avt/avt-03.png';
+import avtar3 from '../../assets/images/avt/avt-04.png';
+import cloudImage from '../../assets/images/icon/Cloud.png';
+import connectLineImage from '../../assets/images/icon/connect-line.png';
+import walletImage from '../../assets/images/icon/Wallet.png';
+import miningImage from '../../assets/images/icon/Mining.png';
+import comparisonImage from '../../assets/images/icon/Comparison.png';
 import './Home.scss';
 
 export const Home = () => {
@@ -22,7 +39,7 @@ export const Home = () => {
             </div>
             <div className="col-xl-6 col-md-12">
               <div className="banner__image">
-                <img src="assets/images/layout/banner-01.png" alt="" />
+                <img src={bannerImage} alt="" />
               </div>
             </div>
           </div>
@@ -2414,7 +2431,7 @@ export const Home = () => {
               <div className="work__main">
                 <div className="work-box">
                   <div className="image">
-                    <img src="assets/images/icon/Cloud.png" alt="" />
+                    <img src={cloudImage} alt="" />
                   </div>
                   <div className="content">
                     <p className="step">Step 1</p>
@@ -2425,11 +2442,11 @@ export const Home = () => {
                       Stacks is a production-ready library of stackable content blocks built in React Native.
                     </p>
                   </div>
-                  <img className="line" src="assets/images/icon/connect-line.png" alt="" />
+                  <img className="line" src={connectLineImage} alt="" />
                 </div>
                 <div className="work-box">
                   <div className="image">
-                    <img src="assets/images/icon/Wallet.png" alt="" />
+                    <img src={walletImage} alt="" />
                   </div>
                   <div className="content">
                     <p className="step">Step 2</p>
@@ -2440,11 +2457,11 @@ export const Home = () => {
                       Stacks is a production-ready library of stackable content blocks built in React Native.
                     </p>
                   </div>
-                  <img className="line" src="assets/images/icon/connect-line.png" alt="" />
+                  <img className="line" src={connectLineImage} alt="" />
                 </div>
                 <div className="work-box">
                   <div className="image">
-                    <img src="assets/images/icon/Mining.png" alt="" />
+                    <img src={miningImage} alt="" />
                   </div>
                   <div className="content">
                     <p className="step">Step 3</p>
@@ -2455,88 +2472,11 @@ export const Home = () => {
                       Stacks is a production-ready library of stackable content blocks built in React Native.
                     </p>
                   </div>
-                  <img className="line" src="assets/images/icon/connect-line.png" alt="" />
+                  <img className="line" src={connectLineImage} alt="" />
                 </div>
                 <div className="work-box">
                   <div className="image">
-                    <img src="assets/images/icon/Comparison.png" alt="" />
-                  </div>
-                  <div className="content">
-                    <p className="step">Step 4</p>
-                    <a href="#" className="title">
-                      Earn money
-                    </a>
-                    <p className="text">
-                      Stacks is a production-ready library of stackable content blocks built in React Native.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="work">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="block-text center">
-                <h3 className="heading">How It Work</h3>
-                <p className="fs-20 desc">
-                  Stacks is a production-ready library of stackable content blocks built in React Native.
-                </p>
-              </div>
-
-              <div className="work__main">
-                <div className="work-box">
-                  <div className="image">
-                    <img src="assets/images/icon/Cloud.png" alt="" />
-                  </div>
-                  <div className="content">
-                    <p className="step">Step 1</p>
-                    <a href="#" className="title">
-                      Download
-                    </a>
-                    <p className="text">
-                      Stacks is a production-ready library of stackable content blocks built in React Native.
-                    </p>
-                  </div>
-                  <img className="line" src="assets/images/icon/connect-line.png" alt="" />
-                </div>
-                <div className="work-box">
-                  <div className="image">
-                    <img src="assets/images/icon/Wallet.png" alt="" />
-                  </div>
-                  <div className="content">
-                    <p className="step">Step 2</p>
-                    <a href="#" className="title">
-                      Connect wallet
-                    </a>
-                    <p className="text">
-                      Stacks is a production-ready library of stackable content blocks built in React Native.
-                    </p>
-                  </div>
-                  <img className="line" src="assets/images/icon/connect-line.png" alt="" />
-                </div>
-                <div className="work-box">
-                  <div className="image">
-                    <img src="assets/images/icon/Mining.png" alt="" />
-                  </div>
-                  <div className="content">
-                    <p className="step">Step 3</p>
-                    <a href="#" className="title">
-                      Start trading
-                    </a>
-                    <p className="text">
-                      Stacks is a production-ready library of stackable content blocks built in React Native.
-                    </p>
-                  </div>
-                  <img className="line" src="assets/images/icon/connect-line.png" alt="" />
-                </div>
-                <div className="work-box">
-                  <div className="image">
-                    <img src="assets/images/icon/Comparison.png" alt="" />
+                    <img src={comparisonImage} alt="" />
                   </div>
                   <div className="content">
                     <p className="step">Step 4</p>
@@ -2562,26 +2502,26 @@ export const Home = () => {
                 <div className="swiper img-swiper">
                   <div className="swiper-wrapper">
                     <div className="swiper-slide">
-                      <img className="img-main" src="assets/images/layout/about-h1.png" alt="" />
+                      <img className="img-main" src={aboutImage} alt="" />
                     </div>
                     <div className="swiper-slide">
-                      <img className="img-main" src="assets/images/layout/about-h1.png" alt="" />
+                      <img className="img-main" src={aboutImage} alt="" />
                     </div>
                     <div className="swiper-slide">
-                      <img className="img-main" src="assets/images/layout/about-h1.png" alt="" />
+                      <img className="img-main" src={aboutImage} alt="" />
                     </div>
                     <div className="swiper-slide">
-                      <img className="img-main" src="assets/images/layout/about-h1.png" alt="" />
+                      <img className="img-main" src={aboutImage} alt="" />
                     </div>
                   </div>
                   <div className="swiper-pagination"></div>
                 </div>
 
-                <img className="icon icon-1" src="assets/images/icon/icon-01.png" alt="" />
-                <img className="icon icon-2" src="assets/images/icon/icon-02.png" alt="" />
-                <img className="icon icon-3" src="assets/images/icon/icon-03.png" alt="" />
-                <img className="icon icon-4" src="assets/images/icon/icon-04.png" alt="" />
-                <img className="icon icon-5" src="assets/images/icon/icon-05.png" alt="" />
+                <img className="icon icon-1" src={icon1Image} alt="" />
+                <img className="icon icon-2" src={icon2Image} alt="" />
+                <img className="icon icon-3" src={icon3Image} alt="" />
+                <img className="icon icon-4" src={icon4Image} alt="" />
+                <img className="icon icon-5" src={icon5Image} alt="" />
               </div>
             </div>
             <div className="col-xl-6 col-md-12">
@@ -2643,10 +2583,10 @@ export const Home = () => {
                 </ul>
                 <div className="group-button">
                   <a href="#">
-                    <img src="assets/images/icon/googleplay.png" alt="" />
+                    <img src={googlePlayIcon} alt="" />
                   </a>
                   <a href="#">
-                    <img src="assets/images/icon/appstore.png" alt="" />
+                    <img src={appStoreIcon} alt="" />
                   </a>
                 </div>
               </div>
@@ -2654,7 +2594,7 @@ export const Home = () => {
             <div className="col-xl-6 col-md-12">
               <div className="download__image">
                 <div className="button">Scan To Download</div>
-                <img src="assets/images/layout/download.png" alt="" />
+                <img src={downloadImage} alt="" />
               </div>
             </div>
           </div>
@@ -2676,13 +2616,13 @@ export const Home = () => {
                 <div className="swiper swiper-thumb1">
                   <div className="swiper-wrapper list-img">
                     <div className="swiper-slide">
-                      <img src="assets/images/avt/avt-02.png" alt="" />
+                      <img src={avtar1} alt="" />
                     </div>
                     <div className="swiper-slide">
-                      <img src="assets/images/avt/avt-03.png" alt="" />
+                      <img src={avtar2} alt="" />
                     </div>
                     <div className="swiper-slide">
-                      <img src="assets/images/avt/avt-04.png" alt="" />
+                      <img src={avtar3} alt="" />
                     </div>
                   </div>
                 </div>
@@ -2705,7 +2645,7 @@ export const Home = () => {
                       </h6>
                       <div className="bottom">
                         <div className="info">
-                          <img src="assets/images/avt/avt-02.png" alt="" />
+                          <img src={avtar1} alt="" />
                           <div className="content">
                             <h6 className="name">Johnny Andro</h6>
                             <p className="position">Director, Company</p>

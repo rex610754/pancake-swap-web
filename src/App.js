@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Home } from '../src/features/home/Home';
 import { Header } from '../src/features/header/Header';
 import { Footer } from '../src/features/footer/Footer';
+import { Trade } from '../src/features/trade/Trade';
 import './App.css';
 
 const App = (props) => {
@@ -15,7 +16,7 @@ const App = (props) => {
         <Routes>
           <Route path={'/'} element={<Home />} exact={true} />
           <Route path={'/home'} element={<Home />} exact={true} />
-          <Route path={'/markets'} element={<Home />} exact={true} />
+          <Route path={'/trade'} element={<Trade />} exact={true} />
         </Routes>
         <Footer />
       </Router>
