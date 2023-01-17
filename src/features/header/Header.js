@@ -6,9 +6,9 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { titleize } from '../../helpers/string';
 import { Button } from 'react-bootstrap';
 import { ConnectWallet } from '../modals/ConnectWallet';
-import { WalletDetails } from '../modals/WalletDetails';
 import { setAccount, getAccount } from './headerSlice';
 import { useSelector, useDispatch } from 'react-redux';
+import { copyText } from '../../helpers/string';
 import Web3 from 'web3';
 
 export const Header = () => {
@@ -18,9 +18,8 @@ export const Header = () => {
   const navigationLinks = ['home', 'about', 'markets', 'trade', 'support', 'feeds'];
 
   const [activeLink, setActiveLink] = useState('home');
-  const [balance, setBalance] = useState(0);
+  // const [balance, setBalance] = useState(0);
   const [showConnect, setShowConnect] = useState(false);
-  const [showDetails, setShowDetails] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -35,7 +34,8 @@ export const Header = () => {
       if (web3) {
         let result = await web3.eth.getBalance(account);
         result = (Number(result) / 10 ** 18).toFixed(5);
-        setBalance(Number(result));
+        // setBalance(Number(result));
+        console.log({ balance: result });
       }
     };
     account && getBalance();
@@ -49,6 +49,18 @@ export const Header = () => {
   const loginWallet = (account) => {
     dispatch(setAccount(account));
     setShowConnect(false);
+  };
+
+  const getWalletDetails = () => {
+    return (
+      <div className="d-flex flex-column details">
+        <div>
+          <span className="account-detail" onClick={() => copyText(account)}>
+            {account.slice(0, 6)}...{account.slice(-4)}
+          </span>
+        </div>
+      </div>
+    );
   };
 
   console.log({ parent: showConnect });
@@ -105,17 +117,15 @@ export const Header = () => {
                 <div className="mobile-button">
                   <span></span>
                 </div>
-                <div className="wallet">
-                  {account ? (
-                    <Button onClick={() => setShowDetails(true)} className="mr-1">
-                      Wallet Details
-                    </Button>
-                  ) : (
+                {account ? (
+                  getWalletDetails()
+                ) : (
+                  <div className="wallet">
                     <Button onClick={() => setShowConnect(true)} className="mr-1">
                       Wallet
                     </Button>
-                  )}
-                </div>
+                  </div>
+                )}
                 <div className="wallet">
                   <Button onClick={() => changePage('trade')}>Trade Now</Button>
                 </div>
@@ -124,12 +134,6 @@ export const Header = () => {
           </div>
         </div>
       </div>
-      <WalletDetails
-        show={showDetails}
-        handleClose={() => setShowDetails(false)}
-        accountAddress={account}
-        accountBalance={balance}
-      />
       <ConnectWallet show={showConnect} handleClose={() => setShowConnect(false)} loginWallet={loginWallet} />
     </header>
   );
