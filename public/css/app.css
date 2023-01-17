@@ -799,15 +799,6 @@ body[data-magic-cursor='hide'] .mouse-cursor {
   color: #e7515a;
   fill: rgba(231, 81, 90, 0.2392156863);
 }
-.header .header__right .wallet {
-  margin-left: 15px;
-}
-.header .header__right .wallet a {
-  padding: 8px 16px;
-  border: 1px solid var(--onsurface);
-  border-radius: 80px;
-  font-size: 12px;
-}
 .header .header__right .trade a {
   padding: 8px 16px;
   border: 1px solid #ebecf0;

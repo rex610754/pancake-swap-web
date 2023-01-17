@@ -12,5 +12,8 @@ module.exports = {
   },
   plugins: ['react'],
   ignorePatterns: ['public/*', 'src/assets/js/**'],
-  rules: {}
+  rules: {
+    'react/prop-types': 'off',
+    'no-debugger': 'off'
+  }
 };

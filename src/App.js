@@ -6,6 +6,8 @@ import { Home } from '../src/features/home/Home';
 import { Header } from '../src/features/header/Header';
 import { Footer } from '../src/features/footer/Footer';
 import { Trade } from '../src/features/trade/Trade';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 import './App.css';
 
 const App = (props) => {
@@ -19,6 +21,7 @@ const App = (props) => {
           <Route path={'/trade'} element={<Trade />} exact={true} />
         </Routes>
         <Footer />
+        <ToastContainer />
       </Router>
     </>
   );
